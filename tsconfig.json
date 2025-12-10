@@ -1,0 +1,19 @@
+{
+    "files": [],
+    "references": [{ "path": "./tsconfig.app.json" }, { "path": "./tsconfig.node.json" }],
+    "compilerOptions": {
+        // ESSENCIAL: Define de onde o alias começa
+        "baseUrl": ".",
+        // ESSENCIAL: Mapeia @/ para ./src/*
+        "paths": {
+            "@/*": ["./src/*"]
+        },
+        // Você pode manter o restante das opções que não são estritamente sobre o app aqui:
+        "noImplicitAny": false,
+        "noUnusedParameters": false,
+        "skipLibCheck": true,
+        "allowJs": true,
+        "noUnusedLocals": false,
+        "strictNullChecks": false
+    }
+}

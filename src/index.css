@@ -1,0 +1,183 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import '@fontsource/playfair-display/400.css';
+@import '@fontsource/playfair-display/600.css';
+@import '@fontsource/playfair-display/700.css';
+@import '@fontsource/inter/300.css';
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+
+@layer base {
+    :root {
+        --background: 200 60% 11%;
+        --foreground: 0 0% 98%;
+
+        --card: 200 55% 14%;
+        --card-foreground: 0 0% 98%;
+
+        --popover: 200 55% 14%;
+        --popover-foreground: 0 0% 98%;
+
+        --primary: 184 98% 51%;
+        --primary-foreground: 200 60% 11%;
+
+        --secondary: 200 50% 18%;
+        --secondary-foreground: 0 0% 98%;
+
+        --muted: 200 45% 20%;
+        --muted-foreground: 200 20% 60%;
+
+        --accent: 184 98% 51%;
+        --accent-foreground: 200 60% 11%;
+
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 210 40% 98%;
+
+        --border: 200 50% 22%;
+        --input: 200 50% 22%;
+        --ring: 184 98% 51%;
+
+        --radius: 0.75rem;
+
+        /* Custom tokens */
+        --gold: 184 98% 51%;
+        --gold-light: 184 98% 65%;
+        --gold-dark: 184 98% 40%;
+        --navy: 200 60% 11%;
+        --navy-light: 200 55% 16%;
+        --cream: 40 30% 95%;
+        --peach: 20 60% 85%;
+        --rose: 350 50% 75%;
+        --dental-blue: 210 70% 50%;
+
+        /* Gradients */
+        --gradient-gold: linear-gradient(135deg, #08f5ff, #06d4e8);
+        --gradient-dark: linear-gradient(180deg, #0b1c2c, #0e2438);
+        --gradient-card: linear-gradient(145deg, #0e2438, #0a1823);
+
+        /* Shadows */
+        --shadow-gold: 0 4px 30px hsl(184 98% 51% / 0.15);
+        --shadow-elegant: 0 10px 40px hsl(0 0% 0% / 0.3);
+        --shadow-card: 0 8px 32px hsl(0 0% 0% / 0.2);
+
+        /* Fonts */
+        --font-display: 'Playfair Display', serif;
+        --font-body: 'Inter', sans-serif;
+
+        --sidebar-background: 200 55% 14%;
+        --sidebar-foreground: 0 0% 98%;
+        --sidebar-primary: 184 98% 51%;
+        --sidebar-primary-foreground: 200 60% 11%;
+        --sidebar-accent: 200 45% 20%;
+        --sidebar-accent-foreground: 0 0% 98%;
+        --sidebar-border: 200 50% 22%;
+        --sidebar-ring: 184 98% 51%;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        @apply bg-background text-foreground;
+        font-family: var(--font-body);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: var(--font-display);
+    }
+}
+
+@layer components {
+    .text-gradient-gold {
+        @apply bg-clip-text text-transparent;
+        background-image: var(--gradient-gold);
+    }
+
+    .bg-gradient-gold {
+        background-image: var(--gradient-gold);
+    }
+
+    .bg-gradient-dark {
+        background-image: var(--gradient-dark);
+    }
+
+    .bg-gradient-card {
+        background-image: var(--gradient-card);
+    }
+
+    .shadow-gold {
+        box-shadow: var(--shadow-gold);
+    }
+
+    .shadow-elegant {
+        box-shadow: var(--shadow-elegant);
+    }
+
+    .shadow-card {
+        box-shadow: var(--shadow-card);
+    }
+
+    .hover-lift {
+        @apply transition-all duration-300 ease-out;
+    }
+
+    .hover-lift:hover {
+        @apply -translate-y-1;
+        box-shadow: var(--shadow-gold);
+    }
+
+    .hover-glow {
+        @apply transition-all duration-300;
+    }
+
+    .hover-glow:hover {
+        box-shadow: 0 0 30px hsl(184 98% 51% / 0.3);
+    }
+
+    .border-gradient {
+        @apply relative;
+    }
+
+    .border-gradient::before {
+        content: '';
+        @apply absolute inset-0 rounded-lg p-[1px];
+        background: var(--gradient-gold);
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+    }
+}
+
+@layer utilities {
+    .animation-delay-100 {
+        animation-delay: 100ms;
+    }
+    .animation-delay-200 {
+        animation-delay: 200ms;
+    }
+    .animation-delay-300 {
+        animation-delay: 300ms;
+    }
+    .animation-delay-400 {
+        animation-delay: 400ms;
+    }
+    .animation-delay-500 {
+        animation-delay: 500ms;
+    }
+}

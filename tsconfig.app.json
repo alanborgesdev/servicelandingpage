@@ -1,0 +1,33 @@
+// tsconfig.app.json
+
+{
+    // NOVO: Herda o baseUrl e paths do arquivo principal
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+        "target": "ES2020",
+        "useDefineForClassFields": true,
+        "lib": ["ES2020", "DOM", "DOM.Iterable"],
+        "module": "ESNext",
+        "skipLibCheck": true,
+
+        /* Bundler mode */
+        "moduleResolution": "bundler",
+        "allowImportingTsExtensions": true,
+        "isolatedModules": true,
+        "moduleDetection": "force",
+        "noEmit": true,
+        "jsx": "react-jsx",
+
+        /* Linting */
+        // Se as opções abaixo já estiverem no tsconfig.json e você as quer aqui,
+        // tudo bem mantê-las (embora "extends" as tornaria redundantes):
+        "strict": false,
+        "noUnusedLocals": false,
+        "noUnusedParameters": false,
+        "noImplicitAny": false,
+        "noFallthroughCasesInSwitch": false
+
+        // REMOVIDOS: baseUrl e paths (porque foram movidos para o tsconfig.json)
+    },
+    "include": ["src", "App.tsx"]
+}
