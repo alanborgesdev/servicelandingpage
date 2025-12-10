@@ -9,7 +9,7 @@ export const CONTACTS = {
         number: import.meta.env.VITE_WHATSAPP_NUMBER || '5511999999999',
         defaultMessage: 'Olá! Gostaria de saber mais sobre os serviços de landing page.',
     },
-    email: import.meta.env.VITE_EMAIL || 'contato@lpstudio.com',
+    email: import.meta.env.VITE_EMAIL || 'contato@borgex.com',
     phone: {
         display: '(11) 99999-9999',
         tel: '+5511999999999',

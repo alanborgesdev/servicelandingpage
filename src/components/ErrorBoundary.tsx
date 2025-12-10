@@ -191,7 +191,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
                                 <p className="text-sm text-muted-foreground">
                                     Se o problema persistir, por favor{' '}
                                     <a
-                                        href="mailto:contato@lpstudio.com"
+                                        href="mailto:contato@borgex.com"
                                         className="text-primary hover:underline"
                                     >
                                         entre em contato
