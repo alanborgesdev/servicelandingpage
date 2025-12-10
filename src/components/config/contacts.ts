@@ -31,5 +31,5 @@ export const COMPANY_INFO = {
     description:
         'Especialista em criação de landing pages profissionais que convertem visitantes em clientes.',
     foundedYear: 2024,
-    logo: '/public/logo.png',
+    logo: '/logo.png',
 } as const;
