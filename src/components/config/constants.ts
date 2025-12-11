@@ -61,7 +61,7 @@ export const ROUTES = {
 export const SECTION_IDS = {
     about: 'sobre',
     plans: 'planos',
-    examples: 'exemplos',
+    models: 'modelos',
     testimonials: 'depoimentos',
     process: 'processo',
     contact: 'contato',

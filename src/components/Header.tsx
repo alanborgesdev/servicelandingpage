@@ -12,7 +12,7 @@ const Header = ({ scrolled }: HeaderProps) => {
     const navItems = [
         { href: `#${SECTION_IDS.about}`, label: 'Sobre' },
         { href: `#${SECTION_IDS.plans}`, label: 'Planos' },
-        { href: `#${SECTION_IDS.examples}`, label: 'Exemplos' },
+        { href: `#${SECTION_IDS.models}`, label: 'Modelos' },
         { href: `#${SECTION_IDS.process}`, label: 'Metodologia' },
         { href: `#${SECTION_IDS.contact}`, label: 'Contato' },
         // { href: `#${SECTION_IDS.testimonials}`, label: 'Depoimentos' },

@@ -10,8 +10,8 @@ const Footer = () => {
     const quickLinks = [
         { href: `#${SECTION_IDS.about}`, label: 'Sobre' },
         { href: `#${SECTION_IDS.plans}`, label: 'Planos' },
-        { href: `#${SECTION_IDS.examples}`, label: 'Exemplos' },
-        { href: `#${SECTION_IDS.testimonials}`, label: 'Depoimentos' },
+        { href: `#${SECTION_IDS.models}`, label: 'Modelos' },
+        // { href: `#${SECTION_IDS.testimonials}`, label: 'Depoimentos' },
         { href: `#${SECTION_IDS.contact}`, label: 'Contato' },
     ];
 

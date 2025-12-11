@@ -43,9 +43,9 @@ export interface ComparisonFeature {
 }
 
 /**
- * Gallery/Example types
+ * Gallery/Model types
  */
-export interface GalleryExample {
+export interface GalleryModel {
     image: string;
     title: string;
     plan: string;
