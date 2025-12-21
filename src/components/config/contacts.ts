@@ -14,7 +14,7 @@ export const CONTACTS = {
         display: '(11) 99999-9999',
         tel: '+5511999999999',
     },
-    location: 'São Paulo, SP - Brasil',
+    location: 'Sorocaba, SP - Brasil',
     social: {
         instagram: import.meta.env.VITE_INSTAGRAM_URL || '#',
         linkedin: import.meta.env.VITE_LINKEDIN_URL || '#',

@@ -3,9 +3,9 @@ import { ExternalLink } from 'lucide-react';
 import { Section } from '@/components/layout/Section';
 import { SECTION_IDS } from '@/components/config/constants';
 import type { GalleryModel } from '@/components/types';
-import modelBarber from '@/assets/model-barber.jpg';
-import modelBeauty from '@/assets/model-beauty.jpg';
-import modelDental from '@/assets/model-dental.jpg';
+import modelBarber from '@/assets/model-barber.webp';
+import modelBeauty from '@/assets/model-beauty.webp';
+import modelDental from '@/assets/model-dental.webp';
 
 const GallerySection = () => {
     const models: GalleryModel[] = [
