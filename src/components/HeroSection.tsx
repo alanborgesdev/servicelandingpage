@@ -76,7 +76,7 @@ const HeroSection = () => {
                     </div>
 
                     {/* Stats */}
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 mt-16 max-w-lg mx-auto opacity-0 animate-fade-in-up animation-delay-400">
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 mt-16 mb-5 max-w-lg mx-auto opacity-0 animate-fade-in-up animation-delay-400">
                         {stats.map(stat => (
                             <div key={stat.label} className="text-center">
                                 <div className="font-display text-2xl md:text-4xl font-bold text-primary">
