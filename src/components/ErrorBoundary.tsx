@@ -1,6 +1,6 @@
 // components/ErrorBoundary.tsx
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
+import { AlertTriangle, Home, RefreshCw } from "lucide-react";
+import { Component, ErrorInfo, ReactNode } from "react";
 
 interface ErrorBoundaryProps {
     children: ReactNode;
@@ -52,7 +52,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
     logErrorToService(error: Error, errorInfo: ErrorInfo): void {
         // Em produção, enviar para Sentry, LogRocket, etc.
         if (import.meta.env.PROD) {
-            console.error('Error Boundary caught an error:', {
+            console.error("Error Boundary caught an error:", {
                 error: error.toString(),
                 errorInfo: errorInfo.componentStack,
                 timestamp: new Date().toISOString(),
@@ -62,9 +62,9 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
             // Sentry.captureException(error, { contexts: { react: { componentStack: errorInfo.componentStack } } });
         } else {
             // Em desenvolvimento, log detalhado no console
-            console.error('Error Boundary caught an error:');
-            console.error('Error:', error);
-            console.error('Error Info:', errorInfo);
+            console.error("Error Boundary caught an error:");
+            console.error("Error:", error);
+            console.error("Error Info:", errorInfo);
         }
     }
 
@@ -81,7 +81,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
     };
 
     handleGoHome = (): void => {
-        window.location.href = '/';
+        window.location.href = "/";
     };
 
     render(): ReactNode {
@@ -113,8 +113,10 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
 
                             {/* Descrição */}
                             <p className="text-center text-muted-foreground mb-6">
-                                Desculpe pelo inconveniente. Um erro inesperado ocorreu.
-                                {import.meta.env.DEV && ' Veja os detalhes abaixo:'}
+                                Desculpe pelo inconveniente. Um erro inesperado
+                                ocorreu.
+                                {import.meta.env.DEV &&
+                                    " Veja os detalhes abaixo:"}
                             </p>
 
                             {/* Detalhes do erro (apenas em desenvolvimento) */}
@@ -149,7 +151,9 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
                                                         Component Stack:
                                                     </p>
                                                     <pre className="text-xs text-muted-foreground bg-background p-2 rounded overflow-x-auto max-h-32">
-                                                        {errorInfo.componentStack}
+                                                        {
+                                                            errorInfo.componentStack
+                                                        }
                                                     </pre>
                                                 </div>
                                             )}
@@ -189,9 +193,9 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
                             {/* Informação adicional */}
                             <div className="mt-6 pt-6 border-t border-border text-center">
                                 <p className="text-sm text-muted-foreground">
-                                    Se o problema persistir, por favor{' '}
+                                    Se o problema persistir, por favor{" "}
                                     <a
-                                        href="mailto:contato@borgex.com"
+                                        href="mailto:borgexweb@gmail.com"
                                         className="text-primary hover:underline"
                                     >
                                         entre em contato

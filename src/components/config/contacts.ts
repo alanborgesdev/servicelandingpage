@@ -6,18 +6,29 @@
  */
 export const CONTACTS = {
     whatsapp: {
-        number: import.meta.env.VITE_WHATSAPP_NUMBER || '5511999999999',
-        defaultMessage: 'Olá! Gostaria de saber mais sobre os serviços de landing page.',
+        number: import.meta.env.VITE_WHATSAPP_NUMBER || "+5515991182095",
+        defaultMessage:
+            "Olá! Gostaria de saber mais sobre os serviços de landing page.",
     },
-    email: import.meta.env.VITE_EMAIL || 'contato@borgex.com',
+
+    email: {
+        address: import.meta.env.VITE_EMAIL || "borgexweb@gmail.com",
+        link:
+            import.meta.env.VITE_EMAIL_LINK ||
+            "mailto:borgexweb@gmail.com",
+    },
+
     phone: {
-        display: '(11) 99999-9999',
-        tel: '+5511999999999',
+        display: "(15) 99118-2095",
+        tel: "+5515991182095",
     },
-    location: 'Sorocaba, SP - Brasil',
+
+    location: "Sorocaba, SP - Brasil",
+
     social: {
-        instagram: import.meta.env.VITE_INSTAGRAM_URL || '#',
-        linkedin: import.meta.env.VITE_LINKEDIN_URL || '#',
+        instagram:
+            import.meta.env.VITE_INSTAGRAM_URL ||
+            "https://www.instagram.com/borgex.web",
     },
 } as const;
 
@@ -25,11 +36,11 @@ export const CONTACTS = {
  * Informações da empresa
  */
 export const COMPANY_INFO = {
-    name: 'BORGEX',
-    fullName: 'BORGEX - Engenharia de Conversão',
-    tagline: 'Engenharia de Conversão',
+    name: "BORGEX",
+    fullName: "BORGEX - Engenharia de Conversão",
+    tagline: "Engenharia de Conversão",
     description:
-        'Especialista em criação de landing pages profissionais que convertem visitantes em clientes.',
+        "Desenvolvedor em criação de landing pages profissionais que convertem visitantes em clientes.",
     foundedYear: 2024,
-    logo: '/logo.png',
+    logo: "/logo.png",
 } as const;
